@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bm-2p-Df4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7bU-Ql-jha">
+            <objects>
+                <viewController id="SW0-Fb-1zK" customClass="ViewController" customModule="MFSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AXd-cN-xwg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yQ-Ks-M7a">
+                                <rect key="frame" x="67" y="64" width="240" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-xx-vVN">
+                                        <rect key="frame" x="8" y="20" width="224" height="30"/>
+                                        <state key="normal" title="Pay VISA"/>
+                                        <connections>
+                                            <action selector="payVISADidPRessed:" destination="SW0-Fb-1zK" eventType="touchUpInside" id="USj-Cg-Vhe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-h4-Ok0">
+                                        <rect key="frame" x="8" y="58" width="224" height="30"/>
+                                        <state key="normal" title="Pay KNET"/>
+                                        <connections>
+                                            <action selector="payKNETDidPRessed:" destination="SW0-Fb-1zK" eventType="touchUpInside" id="pv0-l1-yM7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNe-AF-Jh7">
+                                        <rect key="frame" x="8" y="96" width="224" height="30"/>
+                                        <state key="normal" title="Pay "/>
+                                        <connections>
+                                            <action selector="payDidPRessed:" destination="SW0-Fb-1zK" eventType="touchUpInside" id="zkz-Qz-qDa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mgh-xx-vVN" secondAttribute="trailing" constant="8" id="9Iq-b5-tAK"/>
+                                    <constraint firstAttribute="trailing" secondItem="bNe-AF-Jh7" secondAttribute="trailing" constant="8" id="AEl-T0-vv7"/>
+                                    <constraint firstItem="bjm-h4-Ok0" firstAttribute="leading" secondItem="5yQ-Ks-M7a" secondAttribute="leading" constant="8" id="BIz-oe-RGt"/>
+                                    <constraint firstItem="mgh-xx-vVN" firstAttribute="top" secondItem="5yQ-Ks-M7a" secondAttribute="top" constant="20" id="EFf-3h-lhd"/>
+                                    <constraint firstItem="bjm-h4-Ok0" firstAttribute="top" secondItem="mgh-xx-vVN" secondAttribute="bottom" constant="8" id="HhR-5C-9HV"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjm-h4-Ok0" secondAttribute="trailing" constant="8" id="QUe-FH-7sJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="bNe-AF-Jh7" secondAttribute="bottom" constant="24" id="Qu1-Ky-9PM"/>
+                                    <constraint firstItem="mgh-xx-vVN" firstAttribute="leading" secondItem="5yQ-Ks-M7a" secondAttribute="leading" constant="8" id="Vpe-tE-8z7"/>
+                                    <constraint firstItem="bNe-AF-Jh7" firstAttribute="leading" secondItem="5yQ-Ks-M7a" secondAttribute="leading" constant="8" id="WEC-8e-b1P"/>
+                                    <constraint firstItem="bNe-AF-Jh7" firstAttribute="top" secondItem="bjm-h4-Ok0" secondAttribute="bottom" constant="8" id="Wm5-ds-Mro"/>
+                                    <constraint firstAttribute="height" constant="150" id="pAz-VJ-auz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxg-r6-MtA">
+                                <rect key="frame" x="67" y="222" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="YIx-lz-Be5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ews-mp-Rcl">
+                                <rect key="frame" x="67" y="251" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3PD-wA-MXu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="480-OV-Feq" firstAttribute="trailing" secondItem="5yQ-Ks-M7a" secondAttribute="trailing" constant="68" id="1x7-xX-f2M"/>
+                            <constraint firstItem="dxg-r6-MtA" firstAttribute="top" secondItem="5yQ-Ks-M7a" secondAttribute="bottom" constant="8" id="FLC-yR-N4r"/>
+                            <constraint firstItem="480-OV-Feq" firstAttribute="trailing" secondItem="dxg-r6-MtA" secondAttribute="trailing" constant="68" id="Fs5-oJ-Vz6"/>
+                            <constraint firstItem="Ews-mp-Rcl" firstAttribute="top" secondItem="dxg-r6-MtA" secondAttribute="bottom" constant="8" symbolic="YES" id="VkE-qR-G1h"/>
+                            <constraint firstItem="dxg-r6-MtA" firstAttribute="leading" secondItem="480-OV-Feq" secondAttribute="leading" constant="67" id="WxA-xM-Onb"/>
+                            <constraint firstItem="Ews-mp-Rcl" firstAttribute="leading" secondItem="dxg-r6-MtA" secondAttribute="leading" id="cdk-re-HY9"/>
+                            <constraint firstItem="Ews-mp-Rcl" firstAttribute="trailing" secondItem="dxg-r6-MtA" secondAttribute="trailing" id="qgi-Ib-xdt"/>
+                            <constraint firstItem="5yQ-Ks-M7a" firstAttribute="leading" secondItem="480-OV-Feq" secondAttribute="leading" constant="67" id="qs7-O7-6Qm"/>
+                            <constraint firstItem="5yQ-Ks-M7a" firstAttribute="top" secondItem="480-OV-Feq" secondAttribute="top" id="w88-sm-Sol"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="480-OV-Feq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="66F-aY-W5t"/>
+                    <connections>
+                        <outlet property="errorcodeLabel" destination="dxg-r6-MtA" id="Bg9-ic-GNz"/>
+                        <outlet property="payKNET_Button" destination="bjm-h4-Ok0" id="a85-DD-dqO"/>
+                        <outlet property="payVISA_Button" destination="mgh-xx-vVN" id="Ua4-pZ-RWY"/>
+                        <outlet property="pay_Button" destination="bNe-AF-Jh7" id="MCG-WX-LyA"/>
+                        <outlet property="resultLabel" destination="Ews-mp-Rcl" id="tnk-TX-tFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6f-di-ZUh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="107.49625187406298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MdJ-bd-Kon">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1bm-2p-Df4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ja1-bG-JS5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SW0-Fb-1zK" kind="relationship" relationship="rootViewController" id="VOp-e2-daP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUB-S7-Kc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306" y="107"/>
+        </scene>
+    </scenes>
+</document>

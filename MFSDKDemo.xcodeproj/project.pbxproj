@@ -8,20 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		DA050266213C336D00919749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA050265213C336D00919749 /* AppDelegate.swift */; };
-		DA050268213C336D00919749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA050267213C336D00919749 /* ViewController.swift */; };
-		DA05026B213C336D00919749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA050269213C336D00919749 /* Main.storyboard */; };
 		DA05026D213C336F00919749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA05026C213C336F00919749 /* Assets.xcassets */; };
 		DA050270213C336F00919749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA05026E213C336F00919749 /* LaunchScreen.storyboard */; };
+		DA289B38213D220000F3714D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA289B37213D220000F3714D /* Main.storyboard */; };
+		DA38FBA5216E198400F02AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38FBA4216E198400F02AD6 /* ViewController.swift */; };
+		DA9A37F2216FB24700A6BCC1 /* MFSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */; };
+		DA9A37F3216FB24700A6BCC1 /* MFSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DA38FBA3216E173C00F02AD6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA9A37F3216FB24700A6BCC1 /* MFSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		DA050262213C336D00919749 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA050262213C336D00919749 /* MFSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA050265213C336D00919749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA050267213C336D00919749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA05026A213C336D00919749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA05026C213C336F00919749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA05026F213C336F00919749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA050271213C336F00919749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA289B37213D220000F3714D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DA38FBA4216E198400F02AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MFSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9A37F2216FB24700A6BCC1 /* MFSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +56,8 @@
 		DA050259213C336D00919749 = {
 			isa = PBXGroup;
 			children = (
-				DA050264213C336D00919749 /* Test */,
+				DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */,
+				DA050264213C336D00919749 /* MFSDKDemo */,
 				DA050263213C336D00919749 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,42 +65,43 @@
 		DA050263213C336D00919749 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA050262213C336D00919749 /* Test.app */,
+				DA050262213C336D00919749 /* MFSDKDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA050264213C336D00919749 /* Test */ = {
+		DA050264213C336D00919749 /* MFSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
 				DA050265213C336D00919749 /* AppDelegate.swift */,
-				DA050267213C336D00919749 /* ViewController.swift */,
-				DA050269213C336D00919749 /* Main.storyboard */,
+				DA38FBA4216E198400F02AD6 /* ViewController.swift */,
 				DA05026C213C336F00919749 /* Assets.xcassets */,
 				DA05026E213C336F00919749 /* LaunchScreen.storyboard */,
+				DA289B37213D220000F3714D /* Main.storyboard */,
 				DA050271213C336F00919749 /* Info.plist */,
 			);
-			path = Test;
+			path = MFSDKDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA050261213C336D00919749 /* Test */ = {
+		DA050261213C336D00919749 /* MFSDKDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA050274213C336F00919749 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = DA050274213C336F00919749 /* Build configuration list for PBXNativeTarget "MFSDKDemo" */;
 			buildPhases = (
 				DA05025E213C336D00919749 /* Sources */,
 				DA05025F213C336D00919749 /* Frameworks */,
 				DA050260213C336D00919749 /* Resources */,
+				DA38FBA3216E173C00F02AD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Test;
+			name = MFSDKDemo;
 			productName = Test;
-			productReference = DA050262213C336D00919749 /* Test.app */;
+			productReference = DA050262213C336D00919749 /* MFSDKDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DA05025D213C336D00919749 /* Build configuration list for PBXProject "Test" */;
+			buildConfigurationList = DA05025D213C336D00919749 /* Build configuration list for PBXProject "MFSDKDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA050261213C336D00919749 /* Test */,
+				DA050261213C336D00919749 /* MFSDKDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -122,9 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA289B38213D220000F3714D /* Main.storyboard in Resources */,
 				DA050270213C336F00919749 /* LaunchScreen.storyboard in Resources */,
 				DA05026D213C336F00919749 /* Assets.xcassets in Resources */,
-				DA05026B213C336D00919749 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA050268213C336D00919749 /* ViewController.swift in Sources */,
+				DA38FBA5216E198400F02AD6 /* ViewController.swift in Sources */,
 				DA050266213C336D00919749 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA050269213C336D00919749 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA05026A213C336D00919749 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA05026E213C336F00919749 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,7 +294,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E9WC5VCAQB;
-				INFOPLIST_FILE = Test/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MFSDKDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +316,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E9WC5VCAQB;
-				INFOPLIST_FILE = Test/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MFSDKDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA05025D213C336D00919749 /* Build configuration list for PBXProject "Test" */ = {
+		DA05025D213C336D00919749 /* Build configuration list for PBXProject "MFSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA050272213C336F00919749 /* Debug */,
@@ -324,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA050274213C336F00919749 /* Build configuration list for PBXNativeTarget "Test" */ = {
+		DA050274213C336F00919749 /* Build configuration list for PBXNativeTarget "MFSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA050275213C336F00919749 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Test
+//  MFSDKDemo
 //
 //  Created by Elsayed Hussein on 10/10/18.
 //  Copyright © 2018 MyFatoorah. All rights reserved.

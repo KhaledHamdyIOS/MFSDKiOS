@@ -61,7 +61,7 @@ import MFSDK
 ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey:     // Override point for customization after application launch.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application laun201.pngch.
         MFSettings.sharedInstance.setMerchantWithMerchantCode(merchantCode: "999999",
                                                               merchantName: "Web Pay",
                                                               merchantUserName: "testapi@myfatoorah.com",
@@ -84,8 +84,24 @@ When you try to distribute your app to app store, you may get error like that
 Failed to verify bitcode in MFSDK.framework/MFSDK: error: Cannot extract bundle from /var/folders/jl/mpz7pnbs5v9_lx6qjd_2zjr40000gn/T/IDEDistributionOptionThinning.FiO/Payload/YOUR_APP_NAME.app/Frameworks/MFSDK.framework/MFSDK (x86_64)
 ``
 So do following steps to fix it
-1- Select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase → Name the Script as “Remove Unused Architectures Script”.
-    ![Screenshot](https://github.com/MyFatoorahHub/MFSDK/blob/master/Setp%201.png)
+- Select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase → Name the Script as “Remove Unused Architectures Script”.
+```
+FRAMEWORK="MFSDK"
+FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
+EXTRACTED_ARCHS=()
+for ARCH in $ARCHS
+do
+lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+done
+lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+rm "${EXTRACTED_ARCHS[@]}"
+rm "$FRAMEWORK_EXECUTABLE_PATH"
+mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+```
+- Always this script should be placed below “Embed Frameworks”.
+- This run script removes the unused Simulator architectures only while pushing the Application to the App Store.
+    ![Screenshot](MFSDKiOS/Remove Unused Architectures Script.png)
 
 
 

@@ -107,7 +107,7 @@ mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
    - Always this script should be placed below “Embed Frameworks”.
    - This run script removes the unused Simulator architectures only while pushing the Application to the App Store.
     
-   ![Screenshot](MFSDKiOS/Remove Unused Architectures Script.png)
+   ![Screenshot](https://github.com/MyFatoorahHub/MFSDKiOS/blob/master/Remove%20Unused%20Architectures%20Script.png)
 
 
 

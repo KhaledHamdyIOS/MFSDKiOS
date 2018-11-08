@@ -85,6 +85,7 @@ Failed to verify bitcode in MFSDK.framework/MFSDK: error: Cannot extract bundle 
 ``
 So do following steps to fix it
 1- Select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase → Name the Script as “Remove Unused Architectures Script”.
+    ![Screenshot](https://github.com/MyFatoorahHub/MFSDK/blob/master/Setp%201.png)
 
 
 

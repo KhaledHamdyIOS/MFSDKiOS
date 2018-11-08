@@ -57,12 +57,12 @@ import MFSDK
 
 ```
 
-# Swift 3.0
+# Swift 4.0
 ```
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey:     // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-          MFSettings.sharedInstance.setMerchantWithMerchantCode(merchantCode: "999999",
+        MFSettings.sharedInstance.setMerchantWithMerchantCode(merchantCode: "999999",
                                                               merchantName: "Web Pay",
                                                               merchantUserName: "testapi@myfatoorah.com",
                                                               merchantPassword: "E55D0",

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bm-2p-Df4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bm-2p-Df4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T05-b6-i4i">
+                                <rect key="frame" x="137" y="84" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AOU-5u-651"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yQ-Ks-M7a">
-                                <rect key="frame" x="67" y="64" width="240" height="150"/>
+                                <rect key="frame" x="67" y="164" width="240" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-xx-vVN">
                                         <rect key="frame" x="8" y="20" width="224" height="30"/>
@@ -59,7 +68,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxg-r6-MtA">
-                                <rect key="frame" x="67" y="222" width="240" height="21"/>
+                                <rect key="frame" x="67" y="322" width="240" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YIx-lz-Be5"/>
                                 </constraints>
@@ -68,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ews-mp-Rcl">
-                                <rect key="frame" x="67" y="251" width="240" height="21"/>
+                                <rect key="frame" x="67" y="351" width="240" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3PD-wA-MXu"/>
                                 </constraints>
@@ -80,6 +89,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="480-OV-Feq" firstAttribute="trailing" secondItem="5yQ-Ks-M7a" secondAttribute="trailing" constant="68" id="1x7-xX-f2M"/>
+                            <constraint firstItem="T05-b6-i4i" firstAttribute="top" secondItem="480-OV-Feq" secondAttribute="top" constant="20" id="47F-BY-w5e"/>
+                            <constraint firstItem="T05-b6-i4i" firstAttribute="centerX" secondItem="5yQ-Ks-M7a" secondAttribute="centerX" id="DMt-lK-1i9"/>
                             <constraint firstItem="dxg-r6-MtA" firstAttribute="top" secondItem="5yQ-Ks-M7a" secondAttribute="bottom" constant="8" id="FLC-yR-N4r"/>
                             <constraint firstItem="480-OV-Feq" firstAttribute="trailing" secondItem="dxg-r6-MtA" secondAttribute="trailing" constant="68" id="Fs5-oJ-Vz6"/>
                             <constraint firstItem="Ews-mp-Rcl" firstAttribute="top" secondItem="dxg-r6-MtA" secondAttribute="bottom" constant="8" symbolic="YES" id="VkE-qR-G1h"/>
@@ -87,12 +98,14 @@
                             <constraint firstItem="Ews-mp-Rcl" firstAttribute="leading" secondItem="dxg-r6-MtA" secondAttribute="leading" id="cdk-re-HY9"/>
                             <constraint firstItem="Ews-mp-Rcl" firstAttribute="trailing" secondItem="dxg-r6-MtA" secondAttribute="trailing" id="qgi-Ib-xdt"/>
                             <constraint firstItem="5yQ-Ks-M7a" firstAttribute="leading" secondItem="480-OV-Feq" secondAttribute="leading" constant="67" id="qs7-O7-6Qm"/>
-                            <constraint firstItem="5yQ-Ks-M7a" firstAttribute="top" secondItem="480-OV-Feq" secondAttribute="top" id="w88-sm-Sol"/>
+                            <constraint firstItem="5yQ-Ks-M7a" firstAttribute="top" secondItem="T05-b6-i4i" secondAttribute="bottom" constant="50" id="u15-kC-8gr"/>
+                            <constraint firstItem="dxg-r6-MtA" firstAttribute="top" secondItem="bNe-AF-Jh7" secondAttribute="bottom" constant="32" id="z2a-ss-0Pq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="480-OV-Feq"/>
                     </view>
                     <navigationItem key="navigationItem" id="66F-aY-W5t"/>
                     <connections>
+                        <outlet property="amountTextField" destination="T05-b6-i4i" id="9M7-uy-eBO"/>
                         <outlet property="errorcodeLabel" destination="dxg-r6-MtA" id="Bg9-ic-GNz"/>
                         <outlet property="payKNET_Button" destination="bjm-h4-Ok0" id="a85-DD-dqO"/>
                         <outlet property="payVISA_Button" destination="mgh-xx-vVN" id="Ua4-pZ-RWY"/>

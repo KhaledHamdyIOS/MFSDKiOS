@@ -12,8 +12,8 @@
 		DA050270213C336F00919749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA05026E213C336F00919749 /* LaunchScreen.storyboard */; };
 		DA289B38213D220000F3714D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA289B37213D220000F3714D /* Main.storyboard */; };
 		DA38FBA5216E198400F02AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38FBA4216E198400F02AD6 /* ViewController.swift */; };
-		DA9A37F2216FB24700A6BCC1 /* MFSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */; };
-		DA9A37F3216FB24700A6BCC1 /* MFSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DABE2AEE21A576E900CC9033 /* MFSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABE2AED21A576E800CC9033 /* MFSDK.framework */; };
+		DABE2AEF21A576E900CC9033 /* MFSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DABE2AED21A576E800CC9033 /* MFSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA9A37F3216FB24700A6BCC1 /* MFSDK.framework in Embed Frameworks */,
+				DABE2AEF21A576E900CC9033 /* MFSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		DA050271213C336F00919749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA289B37213D220000F3714D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DA38FBA4216E198400F02AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MFSDK.framework; sourceTree = "<group>"; };
+		DABE2AED21A576E800CC9033 /* MFSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MFSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA9A37F2216FB24700A6BCC1 /* MFSDK.framework in Frameworks */,
+				DABE2AEE21A576E900CC9033 /* MFSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		DA050259213C336D00919749 = {
 			isa = PBXGroup;
 			children = (
-				DA9A37F1216FB24700A6BCC1 /* MFSDK.framework */,
+				DABE2AED21A576E800CC9033 /* MFSDK.framework */,
 				DA050264213C336D00919749 /* MFSDKDemo */,
 				DA050263213C336D00919749 /* Products */,
 			);

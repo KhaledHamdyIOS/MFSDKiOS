@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var payVISA_Button: UIButton!
     @IBOutlet weak var payKNET_Button: UIButton!
     @IBOutlet weak var pay_Button: UIButton!
+    @IBOutlet weak var amountTextField: UITextField!
     
     // customer details
     let customer = MFCustomer()
@@ -43,36 +44,58 @@ class ViewController: UIViewController {
         customer.customerFloorNo = ""
         customer.customerApartment = ""
         
-        for _ in 0..<5 {
-            
-            // MFProduct Details
-            let product = MFProductDetails()
-            
-            product.productName = "ABC"
-            product.productPrice = 0.145
-            product.productQuntity = 4
-            
-            productList.add(product)
-        }
+//        for _ in 0..<5 {
+//
+//            // MFProduct Details
+//            let product = MFProductDetails()
+//
+//            product.productName = "ABC"
+//            product.productPrice = 0.145
+//            product.productQuntity = 4
+//
+//            productList.add(product)
+//        }
     }
     
     @IBAction func payVISADidPRessed(_ sender: AnyObject){
         
         //place order with SDK
-        MFPaymentRequest.sharedInstance.payfor_VISA(customer: customer, productList: productList, subTotal: 0.725, paymentCurrrency: "KWD")
+        let productList = NSMutableArray()
+        
+        let product = MFProductDetails()
+        
+        product.productName = "ABC"
+        product.productPrice = Double(amountTextField.text!) ?? 0
+        product.productQuntity = 1
+        MFPaymentRequest.sharedInstance.payfor_VISA(customer: customer, productList: productList, subTotal: product.productPrice, paymentCurrrency: "KWD")
         
     }
     
     @IBAction func payKNETDidPRessed(_ sender: Any) {
         
         //place order with SDK
-        MFPaymentRequest.sharedInstance.payfor_KNET(customer: customer, productList: productList, subTotal: 0.725, paymentCurrrency: "KWD")
+        let productList = NSMutableArray()
+        
+        let product = MFProductDetails()
+        
+        product.productName = "ABC"
+        product.productPrice = Double(amountTextField.text!) ?? 0
+        product.productQuntity = 1
+        MFPaymentRequest.sharedInstance.payfor_KNET(customer: customer, productList: productList, subTotal: product.productPrice, paymentCurrrency: "KWD")
     }
     
     @IBAction func payDidPRessed(_ sender: Any) {
+        let productList = NSMutableArray()
+
+        let product = MFProductDetails()
         
+        product.productName = "ABC"
+        product.productPrice = Double(amountTextField.text!) ?? 0
+        product.productQuntity = 1
+        
+        productList.add(product)
         //place order with SDK
-        MFPaymentRequest.sharedInstance.payfor_BOTH(customer: customer, productList: productList, subTotal: 0.725, paymentCurrrency: "KWD")
+        MFPaymentRequest.sharedInstance.payfor_BOTH(customer: customer, productList: productList, subTotal: Double(amountTextField.text!) ?? 0, paymentCurrrency: "KWD")
     }
     
 }
